@@ -1,0 +1,26 @@
+{
+  "name": "liri-app",
+  "version": "1.0.0",
+  "description": "liri-app-hw",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vag-tsdc/liri-app.git"
+  },
+  "keywords": [
+    "liri",
+    "app"
+  ],
+  "author": "savvvag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vag-tsdc/liri-app/issues"
+  },
+  "homepage": "https://github.com/vag-tsdc/liri-app#readme",
+  "dependencies": {
+    "inquirer": "^4.0.1"
+  }
+}
