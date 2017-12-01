@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/vag-tsdc/liri-app#readme",
   "dependencies": {
-    "inquirer": "^4.0.1"
-  }
+    "inquirer": "^4.0.1",
+    "node-spotify-api": "^1.0.7",
+    "requests": "^0.2.2",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {}
 }
