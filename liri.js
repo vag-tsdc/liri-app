@@ -7,7 +7,7 @@ var keys = require('./key.js');
 
 var client = new twitter(keys);
 
-if (process.argv[2] === 'my-tweets'){
+if (process.argv[2] === "my-tweets"){
     inquirer.prompt([
         {
             type: 'input',
@@ -37,6 +37,7 @@ if (process.argv[2] === 'my-tweets'){
         });
     } else if (process.argv[2] === 'spotify-this-song') {
         var spotify = new Spotify({
+
             id: '66c85369940a4e668dcf2142e1e87d35',
             secret: '2f232227eacf42d78b43dae20194a321'
     });
