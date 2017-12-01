@@ -6,7 +6,7 @@ var keys = require('./key.js');
 
 var client = new twitter(keys);
 
-if (process.argv[2].toLowerCase() === "my-tweets"){
+if (process.argv[2] === "my-tweets"){
     inquirer.prompt([
         {
             type: 'input',
@@ -34,8 +34,8 @@ if (process.argv[2].toLowerCase() === "my-tweets"){
             }
             });
         });
-    } else if (process.argv[2].toLowerCase() === 'spotify-this-song') {
-        var spotift = new Spotify({
+    } else if (process.argv[2] === 'spotify-this-song') {
+        var spotify = new Spotify({
             id: 'thingsandstuff',
             secret: 'thingsandstuff'
     });
@@ -68,7 +68,7 @@ if (process.argv[2].toLowerCase() === "my-tweets"){
                 console.log(err);
             });
     });
-} else if (process.argv[2].toLowerCase() === "movie-this") {
+} else if (process.argv[2] === "movie-this") {
     inquirer.prompt({
         type: 'input',
         message: 'What movie would you like to search?',
