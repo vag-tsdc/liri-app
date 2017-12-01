@@ -1,3 +1,4 @@
+var fs = require('fs');
 var twitter = require('twitter');
 var Spotify = require('node-spotify-api');
 var request = require('request');
@@ -6,7 +7,7 @@ var keys = require('./key.js');
 
 var client = new twitter(keys);
 
-if (process.argv[2].toLowerCase() === "my-tweets"){
+if (process.argv[2] === 'my-tweets'){
     inquirer.prompt([
         {
             type: 'input',
@@ -20,7 +21,7 @@ if (process.argv[2].toLowerCase() === "my-tweets"){
             count: 20
         };
 
-        client.get('statuses/user_timeline', params, function (error, tweers, response) {
+        client.get('statuses/user_timeline', params, function (error, tweets, response) {
             if (!error) {
                 console.log('Here are your last 20 tweets...');
                 console.log('----------------------------------------------');
@@ -34,10 +35,10 @@ if (process.argv[2].toLowerCase() === "my-tweets"){
             }
             });
         });
-    } else if (process.argv[2].toLowerCase() === 'spotify-this-song') {
-        var spotift = new Spotify({
-            id: 'thingsandstuff',
-            secret: 'thingsandstuff'
+    } else if (process.argv[2] === 'spotify-this-song') {
+        var spotify = new Spotify({
+            id: '66c85369940a4e668dcf2142e1e87d35',
+            secret: '2f232227eacf42d78b43dae20194a321'
     });
 
     inquirer.prompt({
@@ -68,7 +69,7 @@ if (process.argv[2].toLowerCase() === "my-tweets"){
                 console.log(err);
             });
     });
-} else if (process.argv[2].toLowerCase() === "movie-this") {
+} else if (process.argv[2] === "movie-this") {
     inquirer.prompt({
         type: 'input',
         message: 'What movie would you like to search?',
